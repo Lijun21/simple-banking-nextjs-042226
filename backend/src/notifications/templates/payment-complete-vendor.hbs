@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body style="font-family: sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 24px;">
+  <h2 style="color: #1a56db;">Payment Received</h2>
+  <p>Hi {{vendorName}},</p>
+  <p>You have received a payment of <strong>${{amountFormatted}}</strong> from <strong>{{customerCompany}}</strong>.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin: 24px 0;">
+    <tr style="background:#f9fafb;">
+      <td style="padding:10px; border:1px solid #e5e7eb;">Confirmation #</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">{{orderId}}</td>
+    </tr>
+    <tr>
+      <td style="padding:10px; border:1px solid #e5e7eb;">Paid by</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">{{customerCompany}}</td>
+    </tr>
+    <tr style="background:#f9fafb;">
+      <td style="padding:10px; border:1px solid #e5e7eb;">Amount</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">${{amountFormatted}}</td>
+    </tr>
+    <tr>
+      <td style="padding:10px; border:1px solid #e5e7eb;">Payment Method</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">{{paymentMethod}}</td>
+    </tr>
+    <tr style="background:#f9fafb;">
+      <td style="padding:10px; border:1px solid #e5e7eb;">Expected Settlement</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">{{settlementDate}}</td>
+    </tr>
+    {{#if memo}}
+    <tr>
+      <td style="padding:10px; border:1px solid #e5e7eb;">Memo</td>
+      <td style="padding:10px; border:1px solid #e5e7eb;">{{memo}}</td>
+    </tr>
+    {{/if}}
+  </table>
+
+  <p style="color:#6b7280; font-size:14px;">Questions? Contact support@companyp.com</p>
+  <p style="color:#6b7280; font-size:14px;">— Company P</p>
+</body>
+</html>
